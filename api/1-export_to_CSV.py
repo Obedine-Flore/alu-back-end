@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" My module """
 
 import requests
 import sys
