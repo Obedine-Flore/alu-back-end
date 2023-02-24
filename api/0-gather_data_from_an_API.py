@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-""" . """
+""" Library gathers data from API """
 
 import requests
 import sys
 
-""" . """
+""" Function gathers data from API """
 
 if __name__ == "__main__":
     employee_id = sys.argv[1]

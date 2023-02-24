@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" My module """
+""" Module gathers data from API """
 
 import requests
 import sys
