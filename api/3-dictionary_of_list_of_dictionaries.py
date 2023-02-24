@@ -1,13 +1,15 @@
 #!/usr/bin/python3
+""" Library to gather data from an API """
 
 import json
-import request
+import requests
+
 
 def get_employee_task(employee_id):
-
-    url = "https://jsonplaceholder.typicode.com/users/{}"\
+    """Doc"""
+    url = "https://jsonplaceholder.typicode.com/users/{}" \
         .format(employee_id)
-    
+
     user_info = requests.request('GET', url).json()
 
     employee_username = user_info["username"]

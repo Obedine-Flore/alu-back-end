@@ -5,11 +5,11 @@ import json
 import requests
 import sys
 
-""" Function that gathers data from an API """
+""" Function to gather data from an API """
 
 if __name__ == "__main__":
     employee_id = sys.argv[1]
-    url = "https://jsonplaceholder.typicode.com/user/{}".format(employee_id)
+    url = "https://jsonplaceholder.typicode.com/users/{}".format(employee_id)
     todo = "https://jsonplaceholder.typicode.com/todos?userId={}"
     todo = todo.format(employee_id)
 
@@ -19,9 +19,9 @@ if __name__ == "__main__":
     employee_username = user_info.get("username")
 
     todos_info_sorted = [
-            dict(zip(["task", "completed", "username"],
-                     [task["title"], task["completed"], employee_username]))
-            for task in todo_info]
+        dict(zip(["task", "completed", "username"],
+                 [task["title"], task["completed"], employee_username]))
+        for task in todo_info]
 
     user_dict = {str(employee_id): todos_info_sorted}
     with open(str(employee_id) + '.json', "w") as f:
