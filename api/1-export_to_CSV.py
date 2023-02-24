@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-""" Module gathers data from API """
+""" Library to gather data from an API """
 
 import requests
 import sys
 
 if __name__ == "__main__":
     employee_id = sys.argv[1]
-    url = "https://jsonplaceholder.typicode.com/user/{}".format(employee_id)
+    url = "https://jsonplaceholder.typicode.com/users/{}".format(employee_id)
     todo = "https://jsonplaceholder.typicode.com/todos?userId={}"
     todo = todo.format(employee_id)
 
@@ -24,4 +24,4 @@ if __name__ == "__main__":
                  '"' + employee_username + '",' +
                  '"' + str(task["completed"]) + '",' +
                  '"' + task["title"] + '",' + "\n")
-        for task in todo_info]
+         for task in todo_info]
